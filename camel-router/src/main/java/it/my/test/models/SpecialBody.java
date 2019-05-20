@@ -30,6 +30,10 @@ public class SpecialBody {
   public SpecialBody(String input) {
     this.content = input;
   }
+  
+  public SpecialBody() {
+	  
+  }
 
   @Override
   public String toString() {
