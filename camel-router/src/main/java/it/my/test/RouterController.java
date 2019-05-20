@@ -11,15 +11,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("serviceCall")
 public class RouterController {
 
-	@Autowired
-	ProducerTemplate producer;
+  @Autowired ProducerTemplate producer;
 
-	@GetMapping("service")
-	public String callService(@RequestParam("type") String type) {
-		
-		String response = producer.requestBodyAndHeader("direct:service-call", "I am the BODY", "product-type",type, String.class);
+  @GetMapping("service")
+  public String callService(@RequestParam("type") String type) {
 
-		return response;
-	}
+    String response =
+        producer.requestBodyAndHeader(
+            "direct:service-call", "I am the BODY", "product-type", type, String.class);
 
+    return response;
+  }
 }

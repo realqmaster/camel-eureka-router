@@ -8,8 +8,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 @EnableDiscoveryClient
 public class CamelRouterApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(CamelRouterApplication.class, args);
-	}
-
+  public static void main(String[] args) {
+    SpringApplication.run(CamelRouterApplication.class, args);
+  }
 }
