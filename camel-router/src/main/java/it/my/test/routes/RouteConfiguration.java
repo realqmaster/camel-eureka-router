@@ -28,6 +28,7 @@ public class RouteConfiguration extends RouteBuilder {
         .when(e -> e.getIn().getHeader("product-type").equals("B"))
         .setHeader(Exchange.HTTP_METHOD, constant("POST"))
         .setHeader(Exchange.CONTENT_TYPE, constant("application/json"))
+        .setHeader("internal-auth-token", constant("abcd"))
         .process(
             new Processor() {
 
